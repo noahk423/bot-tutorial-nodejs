@@ -7,10 +7,9 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/joke$/;
 
-  var url = 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://api.icndb.com/jokes/random");
+    postMessage("asdf");
     this.res.end();
   } else {
     console.log("don't care");
@@ -22,7 +21,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = https.get('joke', "http://api.icndb.com/jokes/random");
+  botResponse = response
 
   options = {
     hostname: 'api.groupme.com',
