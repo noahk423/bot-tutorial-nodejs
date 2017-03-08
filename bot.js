@@ -9,7 +9,7 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage();
+    postMessage("http://api.icndb.com/jokes/random");
     this.res.end();
   } else {
     console.log("don't care");
@@ -21,7 +21,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = "http://api.icndb.com/jokes/random";
+  botResponse = joke;
 
   options = {
     hostname: 'api.groupme.com',
