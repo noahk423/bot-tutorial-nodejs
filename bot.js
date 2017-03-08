@@ -9,7 +9,7 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    response = "asdf";
+    postMessage(cool());
     this.res.end();
   } else {
     console.log("don't care");
@@ -21,7 +21,6 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = response
 
   options = {
     hostname: 'api.groupme.com',
