@@ -22,6 +22,7 @@ function postMessage() {
   var botResponse, options, body, botReq;
 
 
+  botResponse = options
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
